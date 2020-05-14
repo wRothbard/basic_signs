@@ -1,6 +1,11 @@
 -- Basic wall/yard/metal signs
 -- these were originally part of signs_lib
 
+local default_path = minetest.get_modpath("default")
+
+dofile(default_path.."/init.lua")
+
+
 basic_signs = {}
 basic_signs.path = minetest.get_modpath(minetest.get_current_modname())
 
@@ -33,7 +38,7 @@ signs_lib.register_sign("basic_signs:sign_wall_glass", {
 		"basic_signs_sign_wall_glass_edges.png",
 		"basic_signs_pole_mount_glass.png",
 		nil,
-		"default_steel_block.png" -- the sticks on back of the yard sign model
+		"steel_block.png" -- the sticks on back of the yard sign model
 	},
 	inventory_image = "basic_signs_sign_wall_glass_inv.png",
 	default_color = "c",
@@ -56,7 +61,7 @@ signs_lib.register_sign("basic_signs:sign_wall_obsidian_glass", {
 		"basic_signs_sign_wall_obsidian_glass_edges.png",
 		"basic_signs_pole_mount_obsidian_glass.png",
 		nil,
-		"default_steel_block.png" -- the sticks on back of the yard sign model
+		"steel_block.png" -- the sticks on back of the yard sign model
 	},
 	inventory_image = "basic_signs_sign_wall_obsidian_glass_inv.png",
 	default_color = "c",
@@ -81,7 +86,7 @@ signs_lib.register_sign("basic_signs:sign_wall_plastic", {
 		"basic_signs_sign_wall_plastic_edges.png",
 		"basic_signs_pole_mount_plastic.png",
 		nil,
-		"default_steel_block.png" -- the sticks on back of the yard sign model
+		"steel_block.png" -- the sticks on back of the yard sign model
 	},
 	inventory_image = "basic_signs_sign_wall_plastic_inv.png",
 	default_color = "0",
@@ -122,7 +127,7 @@ for i, color in ipairs(sign_colors) do
 			"signs_lib_sign_wall_steel_edges.png",
 			nil,
 			nil,
-			"default_steel_block.png"
+			"steel_block.png"
 		},
 		inventory_image = "basic_signs_steel_"..color[1].."_inv.png",
 		groups = signs_lib.standard_steel_groups,
